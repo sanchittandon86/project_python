@@ -1,0 +1,32 @@
+Hello Everyone,
+I am making this project on Pycharm (we can use vscode as well)
+so at first,
+we'll have to open the terminal and insatll qrcode (pip insatll qrcode)
+and then we have to insatll pillow (pip insatll pillow)
+import qrcode will help us to generate qrcode
+and taking upi_id as input will help any user to generate its own qrcode
+payment_url format = # upi://pay?pa=UPI_ID&pn=NAME&am=Amount&cu=CURRENCY&tn=MESSAGE
+these are all the parameters that helps in payment process
+pa = parameter, where we have to initiate the payment
+pn = parameter, recipent name
+am = parameter, amount
+cu = parameter, currency
+tn = parameter, message box(after payment)
+mc = parameter, merchant code (optioanl)
+
+then,
+we have defined the payment url based on UPI ID 
+(for eg.) phonepe_url = f'upi://pay?pa={upi_id}&pn=Recipient%20Name&mc=1234'
+we can modify these based on the payment apps 
+
+then,
+we have created qrcode for payment app
+phonepe_qr = qrcode.make(phonepe_url)
+(.make is an function imported from qrcode library)
+
+at last,
+to display the qrcode 
+(for eg.) phonepe_qr.show()
+this initiates with the help of pillow library
+
+
